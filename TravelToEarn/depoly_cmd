@@ -1,0 +1,19 @@
+npx hardhat run scripts/deploy-con.mjs --network matic
+
+-> Contract deployed to address: 0xF934f41ad9109E6F657c8276a4003B877CAD25b2
+
+
+0x91fd9226A321174c63E551fd1a07638a6Cc52BE1
+
+
+npx hardhat run scripts/mint.mjs \--network matic
+
+
+npx hardhat run scripts/a.js \--network matic
+
+
+npx hardhat run scripts/tt.js \--network matic
+
+nohup
+
+nohup npx hardhat run scripts/run_block_chk.js \--network matic
