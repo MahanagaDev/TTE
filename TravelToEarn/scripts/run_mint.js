@@ -9,7 +9,7 @@ var status = 0;
 var minting = 0;
 async function mintNFT(idx,key,uaddress, cityname,country,level,lat,lng,desc) {
   minting =1;
-   const ExampleNFT = await ethers.getContractFactory("TTEToken")
+   const ExampleNFT = await ethers.getContractFactory("TravelToEarn")
    const [owner] = await ethers.getSigners()
    const pt = await ExampleNFT.attach(CONTRACT_ADDRESS).mint3(cityname,country,level,lat,lng,desc,idx,uaddress)
    console.log("NFT minted to: ", uaddress)

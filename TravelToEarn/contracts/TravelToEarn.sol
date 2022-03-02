@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
 
-contract TTEToken is ERC721, Ownable {
+contract TravelToEarn is ERC721, Ownable {
      struct TTE {
         string  CityName;  
         string  CounrtyName;  

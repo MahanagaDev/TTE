@@ -1,5 +1,5 @@
 async function deployContract() {
- const TTEToken = await ethers.getContractFactory("TTEToken")
+ const TTEToken = await ethers.getContractFactory("TravelToEarn")
  const exampleNFT = await TTEToken.deploy()
  await exampleNFT.deployed()
  // This solves the bug in Mumbai network where the contract address is not the real one

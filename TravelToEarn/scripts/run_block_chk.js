@@ -6,7 +6,7 @@ const UPDATE_DATA_URL = "https://solunic.com/tte/update.php?"
 let _processing = 0;
 async function blockNFT(contractAddress, bc) {
 _processing =1;
-   const ExampleNFT = await ethers.getContractFactory("TTEToken")
+   const ExampleNFT = await ethers.getContractFactory("TravelToEarn")
 //   const [owner] = await ethers.getSigners()
    const nft = await ExampleNFT.attach(contractAddress);
    const pt = await nft.getTTE(bc);
