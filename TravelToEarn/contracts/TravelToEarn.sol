@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "hardhat/console.sol";
 
-contract TravelToEarn is ERC721, Ownable {
+contract TravelToEarn2 is ERC721, Ownable {
      struct TTE {
         string  CityName;  
         string  CounrtyName;  
@@ -23,7 +23,7 @@ contract TravelToEarn is ERC721, Ownable {
 
 
 
-    constructor() ERC721("TravelToEarn", "TTE") {  }
+    constructor() ERC721("TravelToEarn2", "TTE") {  }
 
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;

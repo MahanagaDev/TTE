@@ -1,14 +1,14 @@
 var request = require('request');
 
-const CONTRACT_ADDRESS = "0xae9eb8b6F8105D538d3C1df56eC813Bcc51b86F4"
+const CONTRACT_ADDRESS = "0xF4E25dA24Bb48b8Da5e02AD5c13A9B045bA5cf3A"
 const META_DATA_URL = "ipfs://XX"
 const UPDATE_DATA_URL = "https://solunic.com/tte/update.php?"
 let _processing = 0;
 async function blockNFT(contractAddress, bc) {
 _processing =1;
-   const ExampleNFT = await ethers.getContractFactory("TravelToEarn")
+   const eTravelToEarn = await ethers.getContractFactory("TravelToEarn2")
 //   const [owner] = await ethers.getSigners()
-   const nft = await ExampleNFT.attach(contractAddress);
+   const nft = await eTravelToEarn.attach(contractAddress);
    const pt = await nft.getTTE(bc);
    const owners = await (nft.ownerOf(1))
 //   console.log("NFT minted to: ", owner.address)

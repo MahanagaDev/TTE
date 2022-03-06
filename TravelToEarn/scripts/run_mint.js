@@ -1,5 +1,5 @@
 var request = require('request');
-const CONTRACT_ADDRESS = "0xae9eb8b6F8105D538d3C1df56eC813Bcc51b86F4"
+const CONTRACT_ADDRESS = "0xF4E25dA24Bb48b8Da5e02AD5c13A9B045bA5cf3A"
 
 var URL_CHK_DATA= "https://solunic.com/tte/makework.php"
 var URL_CHK_REQ = "http://solunic.com/p1.php"
@@ -9,9 +9,9 @@ var status = 0;
 var minting = 0;
 async function mintNFT(idx,key,uaddress, cityname,country,level,lat,lng,desc) {
   minting =1;
-   const ExampleNFT = await ethers.getContractFactory("TravelToEarn")
+   const eTravelToEarn = await ethers.getContractFactory("TravelToEarn2")
    const [owner] = await ethers.getSigners()
-   const pt = await ExampleNFT.attach(CONTRACT_ADDRESS).mint3(cityname,country,level,lat,lng,desc,idx,uaddress)
+   const pt = await eTravelToEarn.attach(CONTRACT_ADDRESS).mint3(cityname,country,level,lat,lng,desc,idx,uaddress)
    console.log("NFT minted to: ", uaddress)
    console.log("NFT minted to: ", pt)
    const hash = pt.hash;
